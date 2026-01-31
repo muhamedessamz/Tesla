@@ -25,7 +25,15 @@ function Charging() {
   return (
     <div className="tesla-charging-page">
       {/* Hero Section */}
-      <section className="charging-hero">
+      <section
+        className="charging-hero"
+        style={{
+          backgroundImage: "url('https://digitalassets.tesla.com/tesla-contents/image/upload/h_1800,w_2880,c_fit,f_auto,q_auto:best/Supercharger_Ecosystem_Hero_Desktop')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
         <div className="charging-hero-content">
           <h1>Find Your Charge</h1>
           <p>View the network of Tesla Superchargers and Destination Chargers available near you.</p>
@@ -136,18 +144,22 @@ function Charging() {
           <h2>Why Tesla Charging?</h2>
           <div className="benefits-grid">
             <div className="benefit-item">
+              <div className="benefit-icon" style={{ WebkitMaskImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 11.08V12a10 10 0 1 1-5.93-9.14'%3E%3C/path%3E%3Cpolyline points='22 4 12 14.01 9 11.01'%3E%3C/polyline%3E%3C/svg%3E\")" }}></div>
               <h3>Reliability</h3>
               <p>99.95% uptime with 24/7 monitoring and support</p>
             </div>
             <div className="benefit-item">
+              <div className="benefit-icon" style={{ WebkitMaskImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolygon points='13 2 3 14 12 14 11 22 21 10 12 10 13 2'%3E%3C/polygon%3E%3C/svg%3E\")" }}></div>
               <h3>Speed</h3>
               <p>Industry-leading charging speeds get you back on the road faster</p>
             </div>
             <div className="benefit-item">
+              <div className="benefit-icon" style={{ WebkitMaskImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z'%3E%3C/path%3E%3Ccircle cx='12' cy='10' r='3'%3E%3C/circle%3E%3C/svg%3E\")" }}></div>
               <h3>Convenience</h3>
               <p>Seamless experience with automatic billing and mobile app integration</p>
             </div>
             <div className="benefit-item">
+              <div className="benefit-icon" style={{ WebkitMaskImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z'%3E%3C/path%3E%3Ccircle cx='12' cy='10' r='3'%3E%3C/circle%3E%3C/svg%3E\")" }}></div>
               <h3>Coverage</h3>
               <p>Extensive network covering major routes and destinations worldwide</p>
             </div>

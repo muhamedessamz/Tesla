@@ -25,7 +25,15 @@ function Discover() {
   return (
     <div className="tesla-discover-page">
       {/* Hero Section */}
-      <section className="discover-hero">
+      <section
+        className="discover-hero"
+        style={{
+          backgroundImage: "url('https://media.whichcar.com.au/uploads/2025/01/776791ed-2025-tesla-model-y-facelift-whichcar-australia-08.jpg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
         <div className="discover-hero-content">
           <h1>Experience Tesla</h1>
           <p>Defining the future of global sustainable transportation through relentless innovation.</p>
