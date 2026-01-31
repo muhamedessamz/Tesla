@@ -1890,6 +1890,17 @@
     width: 100%;
 }
 
+.form-social .tesla-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.form-social .tesla-btn svg {
+    margin: 0;
+}
+
 @media (max-width: 576px) {
     .form-box {
         padding: 30px 20px;
