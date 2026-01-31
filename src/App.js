@@ -11,6 +11,7 @@ import Energy from './pages/Energy';
 import Charging from './pages/Charging';
 import Discover from './pages/Discover';
 import Shop from './pages/Shop';
+import Support from './pages/Support';
 import About from './pages/AboutEnhanced';
 import Contact from './pages/ContactEnhanced';
 import Footer from './components/Footer';
@@ -40,6 +41,7 @@ function App() {
             <Route path="/charging" element={<Charging />} />
             <Route path="/discover" element={<Discover />} />
             <Route path="/shop" element={<Shop />} />
+            <Route path="/support" element={<Support />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>

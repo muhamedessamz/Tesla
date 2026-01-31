@@ -159,7 +159,7 @@ function Shop() {
               <p>Hassle-free returns within 30 days of purchase</p>
             </div>
             <div className="benefit-item">
-              <div className="benefit-icon" style={{ WebkitMaskImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/xml' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='8' r='7'%3E%3C/circle%3E%3Cpolyline points='8.21 13.89 7 23 12 20 17 23 15.79 13.88'%3E%3C/polyline%3E%3C/svg%3E\")" }}></div>
+              <div className="benefit-icon" style={{ WebkitMaskImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 15l-2 5 2-1 2 1-2-5z'%3E%3C/path%3E%3Cpath d='M12 15a7 7 0 1 0 0-14 7 7 0 0 0 0 14z'%3E%3C/path%3E%3C/svg%3E\")" }}></div>
               <h3>Exclusive Items</h3>
               <p>Unique products you can't find anywhere else</p>
             </div>

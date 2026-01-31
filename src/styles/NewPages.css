@@ -310,7 +310,6 @@
 /* Charging Page Styles */
 .tesla-charging-page {
   width: 100%;
-  overflow-x: hidden;
 }
 
 .charging-hero {
@@ -985,6 +984,7 @@
 }
 
 .categories-container h2 {
+  text-align: center;
   font-size: 3rem;
   font-weight: 600;
   margin-bottom: 5rem;
@@ -1003,6 +1003,10 @@
   border-radius: 32px;
   border: 1px solid rgba(255, 255, 255, 0.05);
   transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .category-card:hover {
@@ -1022,6 +1026,10 @@
   color: rgba(255, 255, 255, 0.6);
   margin-bottom: 2rem;
   font-size: 1.05rem;
+}
+
+.category-card .tesla-btn {
+  margin-top: auto;
 }
 
 /* Featured Products */
@@ -1057,6 +1065,8 @@
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.05);
   transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
 }
 
 .product-card:hover {
@@ -1092,8 +1102,16 @@
 }
 
 .product-info {
-  padding: 1.5rem;
+  padding: 2.5rem 1.5rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.product-info .tesla-btn {
+  margin-top: auto;
 }
 
 .product-info h3 {
@@ -1264,4 +1282,257 @@
   .vehicle-specs span {
     text-align: center;
   }
+}
+
+/* Support Page Styles */
+.tesla-support-page {
+  width: 100%;
+}
+
+.support-hero {
+  background: #000000;
+  padding: 140px 0 80px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.support-hero-content h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+  color: #ffffff;
+}
+
+.support-search-container {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: var(--transition-smooth);
+}
+
+.support-search-container:focus-within {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.support-search-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 16px 16px 16px 50px;
+  color: white;
+  font-size: 1.1rem;
+  outline: none;
+}
+
+.support-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.support-categories {
+  padding: 100px 0;
+  background: #000000;
+}
+
+.support-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+
+.support-card {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 3.5rem 2.5rem;
+  border-radius: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.support-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-10px);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.support-card .support-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--accent-blue);
+  margin-bottom: 2rem;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}
+
+.support-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  color: #ffffff;
+}
+
+.support-card p {
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.support-link {
+  color: var(--accent-blue);
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.3s;
+  margin-top: auto;
+}
+
+.support-link:hover {
+  opacity: 0.8;
+}
+
+.support-resources {
+  padding: 120px 0;
+  background: #000000;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.resources-flex {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.resource-item {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  text-align: center;
+}
+
+.resource-item h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.resource-item p {
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 2.5rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* Contact Methods Styling */
+.support-contact {
+  padding: 120px 0;
+  background: #000000;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.support-contact .section-title {
+  text-align: center;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 600;
+  margin-bottom: 5rem;
+  color: #ffffff;
+}
+
+.contact-methods-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.contact-method-card {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 4rem 3rem;
+  border-radius: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-method-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-10px);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.contact-method-card .method-icon {
+  width: 56px;
+  height: 56px;
+  background: var(--accent-blue);
+  margin-bottom: 2.5rem;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}
+
+.contact-method-card h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  color: #ffffff;
+}
+
+.contact-method-card p {
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 2.5rem;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.method-info {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--accent-blue);
+  display: block;
+  margin-top: auto;
+}
+
+.method-link {
+  color: var(--accent-blue);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: auto;
+  transition: opacity 0.3s;
+}
+
+.method-link:hover {
+  opacity: 0.8;
+}
+
+.btn-sm {
+  padding: 10px 24px;
+  font-size: 0.9rem;
 }
