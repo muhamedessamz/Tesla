@@ -1,0 +1,1049 @@
+.tesla-vehicles-page {
+  width: 100%;
+}
+
+.vehicles-hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 100px 0;
+  text-align: center;
+  overflow: hidden;
+  background-color: #000;
+  /* Fallback */
+}
+
+.vehicles-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.8) 100%);
+  z-index: 1;
+}
+
+.vehicles-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.vehicles-hero-content h1 {
+  font-size: clamp(3rem, 10vw, 5rem);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.03em;
+  background: linear-gradient(180deg, #ffffff 0%, #a0a0a0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.vehicles-hero-content p {
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  opacity: 0.6;
+}
+
+.vehicles-grid-section {
+  padding: 120px 0;
+  background: #000000;
+}
+
+.vehicles-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.vehicles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.vehicle-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1),
+    background-color 0.5s ease,
+    border-color 0.5s ease,
+    box-shadow 0.5s ease;
+  cursor: pointer;
+}
+
+.vehicle-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-10px);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
+}
+
+.vehicle-image {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.vehicle-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.vehicle-card:hover .vehicle-image img {
+  transform: scale(1.05);
+}
+
+.vehicle-content {
+  padding: 2rem;
+}
+
+.vehicle-content h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.vehicle-price {
+  font-size: 1.25rem;
+  color: #3e6ae1;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.vehicle-description {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 1.5rem;
+}
+
+.vehicle-specs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.vehicle-specs span {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.vehicle-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Vehicles Features */
+.vehicles-features {
+  padding: 120px 0;
+  background: #000000;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.vehicles-features .features-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.vehicles-features h2 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+  letter-spacing: -0.02em;
+  margin-bottom: 4rem;
+  line-height: 1.2;
+  width: 100%;
+}
+
+.vehicles-features .features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+
+.vehicles-features .feature-item {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 3rem 2rem;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: center;
+  transition: var(--transition-smooth);
+}
+
+.vehicles-features .feature-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-10px);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.vehicles-features .feature-item::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: var(--accent-blue);
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M13 2L3 14h9l-1 8 10-12h-9l1-8z'%3E%3C/path%3E%3C/svg%3E") no-repeat center;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M13 2L3 14h9l-1 8 10-12h-9l1-8z'%3E%3C/path%3E%3C/svg%3E") no-repeat center;
+  margin: 0 auto 2rem;
+}
+
+.vehicles-features .feature-item h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+.vehicles-features .feature-item p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 1200px) {
+  .vehicles-features .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .vehicles-features {
+    padding: 100px 0;
+  }
+
+  .vehicles-features .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vehicles-features .feature-item {
+    padding: 2.5rem;
+  }
+}
+
+/* Compare Table */
+.vehicles-compare {
+  padding: 120px 0;
+  background: #000000;
+}
+
+.compare-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.compare-container h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #393c41;
+}
+
+.compare-table {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+}
+
+.compare-header,
+.compare-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.compare-header {
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+}
+
+.compare-row {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.compare-cell {
+  padding: 2rem;
+  text-align: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.compare-cell:last-child {
+  border-right: none;
+}
+
+.compare-header .compare-cell {
+  font-weight: 600;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Charging Page Styles */
+.tesla-charging-page {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.charging-hero {
+  background: linear-gradient(180deg, #000000 0%, #0a0a0a 100%);
+  color: white;
+  padding: 180px 0 100px;
+  text-align: center;
+}
+
+.charging-hero-content h1 {
+  font-size: clamp(3rem, 10vw, 5rem);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(180deg, #ffffff 0%, #a0a0a0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.charging-hero-content p {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+.charging-stats {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+/* Charging Map */
+.charging-map {
+  padding: 120px 0;
+  background: #000000;
+}
+
+.map-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.map-placeholder {
+  position: relative;
+  height: 600px;
+  background: transparent;
+  overflow: hidden;
+  margin-bottom: 5rem;
+}
+
+.map-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.charging-marker {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.marker-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.marker-dot.red {
+  background: #e31937;
+}
+
+.marker-dot.gray {
+  background: #666;
+}
+
+.world-map {
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+}
+
+.map-actions {
+  text-align: center;
+}
+
+.map-actions .tesla-btn {
+  margin: 0 0.5rem;
+}
+
+/* Charging Types */
+.charging-types {
+  padding: 80px 0;
+  background: white;
+}
+
+.types-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.types-container h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 5rem;
+  color: #ffffff;
+}
+
+.charging-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.charging-type-card {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 3rem 2rem;
+  border-radius: 24px;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.charging-type-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #393c41;
+}
+
+.charging-speed {
+  font-size: 1.125rem;
+  color: #e31937;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.charging-type-card p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+.charging-type-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.charging-type-card li {
+  padding: 0.5rem 0;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.6);
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.charging-type-card li::before {
+  content: '⚡';
+  position: absolute;
+  left: 0;
+  color: #ffffff;
+  opacity: 0.5;
+}
+
+/* Charging Benefits */
+.charging-benefits {
+  padding: 120px 0;
+  background: #050505;
+}
+
+.charging-benefits h2 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 5rem;
+  color: #ffffff;
+}
+
+.charging-benefits .benefit-item {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.charging-benefits .benefit-item h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.charging-benefits .benefit-item p {
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.7;
+}
+
+/* Discover Page Styles */
+.tesla-discover-page {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.discover-hero {
+  background: linear-gradient(180deg, #000000 0%, #0a0a0a 100%);
+  color: white;
+  padding: 180px 0 100px;
+  text-align: center;
+}
+
+.discover-hero-content h1 {
+  font-size: clamp(3rem, 10vw, 5rem);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.03em;
+  background: linear-gradient(180deg, #ffffff 0%, #a0a0a0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.discover-hero-content p {
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  opacity: 0.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Discover Features */
+.discover-features {
+  padding: 120px 0;
+  background: #000000;
+}
+
+.discover-features .features-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.feature-large {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.feature-content h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.feature-content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 3rem;
+}
+
+.feature-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.feature-video {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.feature-video video {
+  width: 100%;
+  height: auto;
+}
+
+/* Innovation Grid */
+.discover-innovation {
+  padding: 120px 0;
+  background: #050505;
+}
+
+.innovation-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.innovation-container h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 4rem;
+  color: #ffffff;
+}
+
+.innovation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.innovation-item {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 3rem 2rem;
+  border-radius: 24px;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.innovation-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-8px);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.innovation-item h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.innovation-item p {
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.7;
+}
+
+/* Sustainability */
+.discover-sustainability {
+  padding: 120px 0;
+  background: #000000;
+}
+
+.sustainability-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.sustainability-container h2 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 5rem;
+  color: #ffffff;
+}
+
+.sustainability-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.sustainability-text h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.sustainability-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 3rem;
+}
+
+.sustainability-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sustainability-text li {
+  padding: 0.75rem 0;
+  color: rgba(255, 255, 255, 0.6);
+  position: relative;
+  padding-left: 2rem;
+  font-weight: 500;
+}
+
+.sustainability-text li::before {
+  content: '🌱';
+  position: absolute;
+  left: 0;
+}
+
+.sustainability-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sustainability-stats .stat-item {
+  text-align: center;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.sustainability-stats .stat-number {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.sustainability-stats .stat-label {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Experience Tesla */
+.discover-experience {
+  padding: 120px 0;
+  background: #050505;
+  color: white;
+}
+
+.experience-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.experience-container h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 5rem;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.experience-item {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 3rem 2rem;
+  border-radius: 24px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.experience-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-8px);
+}
+
+.experience-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.experience-item p {
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* Shop Page Styles */
+.tesla-shop-page {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.shop-hero {
+  background: linear-gradient(135deg, #393c41, #1a1a1a);
+  color: white;
+  padding: 120px 0 80px;
+  text-align: center;
+}
+
+.shop-hero-content h1 {
+  font-size: clamp(3rem, 10vw, 5rem);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(180deg, #ffffff 0%, #a0a0a0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.shop-hero-content p {
+  font-size: 1.5rem;
+  opacity: 0.9;
+}
+
+/* Shop Categories */
+.shop-categories {
+  padding: 120px 0;
+  background: #000000;
+}
+
+.categories-container h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 5rem;
+  color: #ffffff;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.category-card {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 3rem 2rem;
+  border-radius: 24px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.category-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-8px);
+}
+
+.category-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.category-card p {
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 2rem;
+}
+
+/* Featured Products */
+.shop-featured {
+  padding: 120px 0;
+  background: #050505;
+}
+
+.featured-container h2 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 5rem;
+  color: #ffffff;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.product-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.product-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-8px);
+}
+
+.product-image {
+  height: 200px;
+  background: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-placeholder {
+  color: #666;
+  font-weight: 500;
+}
+
+.product-info {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.product-info h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.product-price {
+  font-size: 1.125rem;
+  color: #3e6ae1;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+/* Shop Benefits */
+.shop-benefits {
+  padding: 120px 0;
+  background: #000000;
+}
+
+.shop-benefits h2 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 5rem;
+  color: #ffffff;
+}
+
+.shop-benefits .benefit-item {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 3rem 2rem;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: center;
+}
+
+.shop-benefits .benefit-item h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.shop-benefits .benefit-item p {
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+  .vehicles-grid,
+  .categories-grid,
+  .products-grid,
+  .charging-grid,
+  .innovation-grid,
+  .experience-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-large,
+  .sustainability-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .compare-header,
+  .compare-row {
+    grid-template-columns: 1fr;
+  }
+
+  .compare-cell {
+    border-right: none;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .charging-stats {
+    gap: 2rem;
+  }
+
+  .vehicle-buttons,
+  .feature-buttons,
+  .energy-buttons {
+    flex-direction: column;
+  }
+
+  .tesla-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .vehicles-hero-content h1,
+  .charging-hero-content h1,
+  .discover-hero-content h1,
+  .shop-hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .vehicle-specs {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .vehicle-specs span {
+    text-align: center;
+  }
+}

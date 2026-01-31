@@ -1,0 +1,269 @@
+/* Tesla Navbar Styles */
+.tesla-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tesla-navbar.scrolled {
+  background: rgba(0, 0, 0, 0.85);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tesla-nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  height: 56px;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+/* Tesla Logo */
+.tesla-logo {
+  flex-shrink: 0;
+}
+
+.tesla-logo a {
+  display: block;
+  text-decoration: none;
+  color: #171a20;
+}
+
+.tesla-logo-svg {
+  width: 120px;
+  height: 24px;
+  fill: currentColor;
+}
+
+/* Center Navigation */
+.tesla-nav-center {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex: 1;
+  justify-content: center;
+}
+
+.tesla-nav-link {
+  color: #171a20;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.tesla-nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px rgba(62, 106, 225, 0.2);
+  transform: translateY(-1px);
+}
+
+/* Right Navigation */
+.tesla-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.tesla-nav-support,
+.tesla-nav-shop,
+.tesla-nav-account {
+  display: none;
+}
+
+.tesla-menu-btn {
+  background: none;
+  border: none;
+  color: #171a20;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tesla-menu-btn:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Mobile Menu */
+.tesla-mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 320px;
+  height: 100vh;
+  background: white;
+  z-index: 2000;
+  transition: right 0.3s ease;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tesla-mobile-menu.active {
+  right: 0;
+}
+
+.tesla-mobile-menu-content {
+  padding: 24px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.tesla-mobile-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: #171a20;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.tesla-mobile-close:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.tesla-mobile-links {
+  margin-top: 60px;
+}
+
+.tesla-mobile-links a {
+  display: block;
+  color: #171a20;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.tesla-mobile-links a:hover {
+  color: #3e6ae1;
+}
+
+.tesla-mobile-links hr {
+  margin: 16px 0;
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (min-width: 1200px) {
+
+  .tesla-nav-support,
+  .tesla-nav-shop,
+  .tesla-nav-account {
+    display: block;
+  }
+}
+
+@media (max-width: 1199px) {
+  .tesla-nav-center {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .tesla-nav-center {
+    gap: 16px;
+  }
+
+  .tesla-nav-link {
+    font-size: 13px;
+    padding: 6px 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tesla-nav-container {
+    padding: 0 16px;
+  }
+
+  .tesla-nav-center {
+    display: none;
+  }
+
+  .tesla-logo-svg {
+    width: 100px;
+    height: 20px;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .tesla-navbar {
+    background: rgba(0, 0, 0, 0.6);
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .tesla-logo a,
+  .tesla-nav-link,
+  .tesla-menu-btn {
+    color: white;
+  }
+
+  .tesla-nav-link:hover,
+  .tesla-menu-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+
+  .tesla-mobile-menu {
+    background: #000;
+  }
+
+  .tesla-mobile-close,
+  .tesla-mobile-links a {
+    color: white;
+  }
+
+  .tesla-mobile-close:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .tesla-mobile-links a:hover {
+    color: #3e6ae1;
+  }
+
+  .tesla-mobile-links hr {
+    border-top-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Smooth scrolling offset for fixed navbar */
+html {
+  scroll-padding-top: 56px;
+}
+
+/* Animation for navbar appearance */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.tesla-navbar {
+  animation: slideDown 0.3s ease-out;
+}
