@@ -24,6 +24,10 @@ import './styles/TeslaExtended.css';
 import './styles/CarPages.css';
 import './styles/NewPages.css';
 
+import Account from './pages/Account';
+import Login from './pages/Login';
+import Register from './pages/Register';
+
 function App() {
   return (
     <Router>
@@ -42,6 +46,9 @@ function App() {
             <Route path="/discover" element={<Discover />} />
             <Route path="/shop" element={<Shop />} />
             <Route path="/support" element={<Support />} />
+            <Route path="/account" element={<Account />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
