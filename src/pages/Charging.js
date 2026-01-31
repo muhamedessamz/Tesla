@@ -28,7 +28,7 @@ function Charging() {
       <section
         className="charging-hero"
         style={{
-          backgroundImage: "url('https://digitalassets.tesla.com/tesla-contents/image/upload/h_1800,w_2880,c_fit,f_auto,q_auto:best/Supercharger_Ecosystem_Hero_Desktop')",
+          backgroundImage: "url('https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Supercharger_Ecosystem_Hero_Desktop.jpg')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
@@ -36,16 +36,24 @@ function Charging() {
       >
         <div className="charging-hero-content">
           <h1>Find Your Charge</h1>
-          <p>View the network of Tesla Superchargers and Destination Chargers available near you.</p>
+          <p>Explore the global network of Superchargers and Destination Chargers.</p>
           <div className="charging-stats">
             <div className="stat-item">
-              <span className="stat-number">32,875</span>
-              <span className="stat-label">Superchargers</span>
+              <span className="stat-number">55,000+</span>
+              <span className="stat-label">Global Superchargers</span>
             </div>
             <div className="stat-item">
-              <span className="stat-number">10,386</span>
+              <span className="stat-number">10,000+</span>
               <span className="stat-label">Destination Chargers</span>
             </div>
+          </div>
+          <div className="hero-actions">
+            <button
+              className="tesla-btn tesla-btn-primary"
+              onClick={() => document.querySelector('.charging-map').scrollIntoView({ behavior: 'smooth' })}
+            >
+              Find a Station
+            </button>
           </div>
         </div>
       </section>

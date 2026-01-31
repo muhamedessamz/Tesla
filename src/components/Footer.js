@@ -2,7 +2,7 @@ import React from 'react';
 
 function Footer() {
   return (
-    <footer className="text-white py-4" style={{ backgroundColor: '#000000' }}>
+    <footer className="text-white py-5" style={{ backgroundColor: '#000000', borderTop: '1px solid rgba(255, 255, 255, 0.1)' }}>
       <div className="container">
         <div className="row">
           <div className="col-md-4 mb-4 mb-md-0">
